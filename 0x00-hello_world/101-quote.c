@@ -1,16 +1,17 @@
+#include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - print quote
  *
- * Description: Function that returns a value to the standard error.
- * The value in this case, is a string.
- * Return: 1
+ * Description: prints Dora's quote
+ *
+ * Return: Always 1 (Success)
  */
+
 int main(void)
 {
-	fwrite(STDERR, "and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
 
