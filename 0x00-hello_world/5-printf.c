@@ -1,2 +1,2 @@
 #include <stdio.h>
-printf("with proper grammar, but the outcome is a piece of art,\n");
+printf("%s\n", "with proper grammar, but the outcome is a piece of art,");
