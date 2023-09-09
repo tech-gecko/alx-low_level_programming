@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - 2 digits
+ *
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
 	int i;
