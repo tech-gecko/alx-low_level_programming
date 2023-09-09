@@ -15,11 +15,12 @@ int main(void)
 		if (i != 'e')
 		{
 			if (i != 'q')
-			{
+			i
 				putchar(i);
 				i++;
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
