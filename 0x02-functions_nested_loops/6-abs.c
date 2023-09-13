@@ -8,18 +8,16 @@
  */
 int _abs(int a)
 {
-	int i;
-
-	if (i > 0)
+	if (a > 0)
 	{
-		return (i);
+		return (a);
 	}
-	else if (i == 0)
+	else if (a == 0)
 	{
 		return (0);
 	}
 	else
 	{
-		return (i * -1);
+		return (a * -1);
 	}
 }

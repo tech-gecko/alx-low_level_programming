@@ -9,11 +9,9 @@
  */
 void print_to_98(int n)
 {
-	int z;
-
-	if (z <= 98)
+	if (n <= 98)
 	{
-		int i = z;
+		int i = n;
 
 		while (i <= 98)
 		{
@@ -25,7 +23,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		int i = z;
+		int i = n;
 
 		while (i >= 98)
 		{
