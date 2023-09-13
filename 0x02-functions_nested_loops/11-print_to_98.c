@@ -9,11 +9,11 @@
  */
 void print_to_98(int n)
 {
-	int n;
+	int z;
 
-	if (n <= 98)
+	if (z <= 98)
 	{
-		int i = n;
+		int i = z;
 
 		while (i <= 98)
 		{
@@ -25,14 +25,14 @@ void print_to_98(int n)
 	}
 	else
 	{
-		int i = n;
+		int i = z;
 
 		while (i >= 98)
 		{
 			printf("%d", i);
-			if (i < 98)
+			if (i > 98)
 				printf(", ");
-			i++;
+			i--;
 		}
 	}
 	printf("\n");
