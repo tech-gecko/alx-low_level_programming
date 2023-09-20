@@ -15,10 +15,10 @@ void generator(char *password, int length);
 
 int main(void)
 {
-	srand(time(NULL));
+	int passlength = 8;
+	char password[9];
 
-	int passLength = 8;
-	char password[passLength + 1];
+	srand(time(NULL));
 
 	generator(password, passLength);
 	printf("%s\n", password);
