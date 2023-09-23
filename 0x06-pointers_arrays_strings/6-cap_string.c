@@ -9,6 +9,7 @@
 char *cap_string(char *s)
 {
 	int i;
+	char *p = s;
 
 	bool isSeparator(char c)
 	{
@@ -24,11 +25,15 @@ char *cap_string(char *s)
 		}
 	}
 
-	if (*s[0] >= 97 && *s[0] <= 122)
-		*s[0] = *s[0] - 32;
-	for (i = 1; *s[i] != '\0'; i++)
+	while (*p != '\0')
 	{
-		if ((isSeparator(*s[i - 1])) && (*s[i] >= 97 && *s[i] <= 122))
-			*s[i] = *s[i] - 32;
+		if (*p >= 'a' && *p <= 'z')
+			*p = *p - ('a' - 'A');
+		for (i = 1; *p != '\0'; i++)
+		{
+			if ((isSeparator(*p[i - 1])) && (*p[i] >= 'a' && *p <= 'z'))
+				*p = *p - ('a' - 'A');
+		}
 	}
+	return (s);
 }

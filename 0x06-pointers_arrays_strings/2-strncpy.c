@@ -13,12 +13,19 @@ char *_strncpy(char *dest, char *src, int n)
 	char *val = dest;
 	int i = 0;
 
-	while (i < n && *src != '\0')
+	while (i < n &&)
 	{
-		*dest[i] = *src[i];
-		dest++;
-		src++;
+		if (*src != '\0')
+		{
+			*val = *src;
+			src++;
+		}
+		else
+		{
+			*val = '\0';
+		}
+		val++;
+		i++;
 	}
-	*dest = '\0';
-	return (val);
+	return (dest);
 }
