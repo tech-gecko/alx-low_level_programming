@@ -10,12 +10,13 @@
  */
 int _sqrt_recursion(int n)
 {
+	int guess = n / 2;
+	int error = (guess * guess) - n;
+
 	if (n < 0)
 		return (-1);
 	else if (n == 0 || n == 1)
 		return (n);
-	int guess = n / 2;
-	int error = (guess * guess) - n;
 
 	if (error == 0)
 		return (guess);
