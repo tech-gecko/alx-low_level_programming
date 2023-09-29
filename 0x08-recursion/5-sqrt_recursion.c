@@ -10,18 +10,27 @@
  */
 int _sqrt_recursion(int n)
 {
-	int guess = n / 2;
-	int error = (guess * guess) - n;
-
 	if (n < 0)
 		return (-1);
 	else if (n == 0 || n == 1)
 		return (n);
-
-	if (error == 0)
-		return (guess);
-	else if (error > 0)
-		return (_sqrt_recursion(n - 1));
 	else
-		return (_sqrt_recursion(n + 1));
+		return (sqrt_guesser(n, 1));
+
+/**
+* sqrt_guesser - Guesses the natural square root.
+* @n: Number whose SQRT is to be guessed.
+* @guess: Guess, starting from 1 till INT_MAX.
+*
+* Return: The square root after guessing succeeds.
+*/
+	int sqrt_guesser(int n, int guess)
+	{
+		if (guess * guess == n)
+			return (guess);
+		else if (guess * guess > 1)
+			return (-1);
+		else
+			return (sqrt_guesser(n, guess + 1));
+	}
 }
