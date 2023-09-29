@@ -31,4 +31,6 @@ int sqrt_guesser(int n, int guess)
 		return (guess);
 	else if (guess * guess < n)
 		return (sqrt_guesser(n, guess + 1));
+	else if (guess * guess > n)
+		return (-1);
 }
