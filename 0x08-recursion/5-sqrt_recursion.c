@@ -28,9 +28,15 @@ int _sqrt_recursion(int n)
 int sqrt_guesser(int n, int guess)
 {
 	if (guess * guess == n)
+	{
 		return (guess);
-	else if (guess * guess < n)
-		return (sqrt_guesser(n, guess + 1));
+	}
 	else if (guess * guess > n)
+	{
 		return (-1);
+	}
+	else
+	{
+		return (sqrt_guesser(n, guess + 1));
+	}
 }
