@@ -12,7 +12,7 @@ int sqrt_guesser(int n, int guess);
 int is_prime_number(int n);
 int prime_check(int n, int d);
 int is_palindrome(char *s);
-void _puts(char *s);
-void _print_rev(char *s);
+int strlen_recursion(char *s);
+int palindrome_check(char *s, int i, int j);
 
 #endif
