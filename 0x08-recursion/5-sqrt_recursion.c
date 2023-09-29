@@ -16,6 +16,7 @@ int _sqrt_recursion(int n)
 		return (n);
 	else
 		return (sqrt_guesser(n, 1));
+}
 
 /**
 * sqrt_guesser - Guesses the natural square root.
@@ -24,13 +25,12 @@ int _sqrt_recursion(int n)
 *
 * Return: The square root after guessing succeeds.
 */
-	int sqrt_guesser(int n, int guess)
-	{
-		if (guess * guess == n)
-			return (guess);
-		else if (guess * guess > 1)
-			return (-1);
-		else
-			return (sqrt_guesser(n, guess + 1));
-	}
+int sqrt_guesser(int n, int guess)
+{
+	if (guess * guess == n)
+		return (guess);
+	else if (guess * guess > 1)
+		return (-1);
+	else
+		return (sqrt_guesser(n, guess + 1));
 }
