@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
+
+int is_positive_number(char *s);
 
 /**
  * main - Prints the sum of positive integers entered after a command.
@@ -13,25 +16,40 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int sum;
+	int sum = 0;
 
-	for (i = 1; i < argc; i++)
+	if (argc <= 1)
+		printf("%d\n", 0);
+	else
 	{
-		if (argc <= 1)
-			printf("%d\n", 0);
-		else
+		for (i = 1; i < argc; i++)
 		{
-			while (**argv != '\0')
+			if (!is_positive_number(argv[i]))
 			{
-				if (*argv[i] < '0' || *argv[i] > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
-				sum += atoi(argv[i]);
+				printf("Error\n");
+				return (1);
 			}
+			sum += atoi(argv[i]);
 		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
+}
+
+/**
+ * is_positive_number - Checks if input number is positive.
+ * @s: Pointer-to-string to be checked.
+ *
+ * Return: 0 if negative
+ *         1 if positive.
+ */
+int is_positive_number(char *s)
+{
+	while (*s != '\0')
+	{
+		if (*s < '0' || *s > '9')
+			return (0);
+		s++;
+	}
+	return (1);
 }
