@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		ps1s2++;
 		s2++;
 	}
-	ps1s2 = '\0'
+	ps1s2 = '\0';
 	return (ps1s2);
 	free(ps1s2);
 }
