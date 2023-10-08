@@ -28,4 +28,5 @@ char *_strdup(char *str)
 	}
 	p[l] = '\0';
 	return (p);
+	free(p);
 }
