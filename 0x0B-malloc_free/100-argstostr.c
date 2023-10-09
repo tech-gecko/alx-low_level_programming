@@ -10,7 +10,8 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k = 0, l = 1, m = 0;
+	int i, j, l = 1, m = 0;
+	long unsigned int k = 0;
 	char **p;
 	int arglength = ac - 1;
 
@@ -41,6 +42,6 @@ char *argstostr(int ac, char **av)
 		m++;
 	}
 	p[l][k + m] = '\0';
-	return (p);
+	return (p[i]);
 	free(p);
 }
