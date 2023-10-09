@@ -10,38 +10,41 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, l = 1, m = 0;
-	long unsigned int k = 0;
-	char **p;
-	int arglength = ac - 1;
+	int i, j;
+	int l1 = 0, l2 = 0, lTotal = 0;
+	char *args;
 
 	if (ac == 0 || av == NULL)
-		return (NULL);
-	p = malloc(sizeof(char *) * ac);
-	if (p == NULL)
-		return (NULL);
-	for (i = 0; i < arglength - 1; i++)
 	{
-		p[i] = malloc(sizeof(char) * sizeof(av[i + 1]));
-		if (p[i] == NULL)
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (l1 = 0; av[i][l1] != '\0'; l1++)
 		{
-			for (j = 0; j < i; j++)
-				free(p[j]);
-			return (NULL);
+			lTotal++;
 		}
+		lTotal++;
 	}
-	while (k < (sizeof(av[1]) - 1))
+
+	args = (char *)malloc(lTotal + 1);
+
+	if (args == NULL)
 	{
-		p[0][k] = av[1][k];
-		k++;
+		return (NULL);
 	}
-	while (l < arglength - 1)
+
+	for (i = 0; i < ac; i++)
 	{
-		p[l][k + m] = av[l + 1][m];
-		l++;
-		m++;
+		while (av[i][l2] != '\0')
+		{
+			args[j] = av[i][l2];
+			j++;
+			l2++;
+		}
+			args[j] = '\n';
+			j++;
 	}
-	p[l][k + m] = '\0';
-	return (p[i]);
-	free(p);
+	args[j] = '\0';
+	return (args);
 }
