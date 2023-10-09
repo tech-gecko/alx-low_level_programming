@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j;
-	int l1 = 0, l2 = 0, lTotal = 0;
+	int l1 = 0, l2 = 0, lTotal1 = 0, lTotal2 = 0, lTotal;
 	char *args;
 
 	if (ac == 0 || av == NULL)
@@ -20,13 +20,14 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (l1 = 0; av[i][l1] != '\0'; l1++)
-		{
-			lTotal++;
-		}
-		lTotal++;
+		lTotal2++;
+	}
+	for (l1 = 0; av[i][l1] != '\0'; l1++)
+	{
+		lTotal1++;
 	}
 
+	lTotal = lTotal1 * lTotal2;
 	args = (char *)malloc(sizeof(char) * (lTotal + 1));
 
 	if (args == NULL)
