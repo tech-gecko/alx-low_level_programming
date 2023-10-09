@@ -47,4 +47,5 @@ char *argstostr(int ac, char **av)
 	}
 	args[j] = '\0';
 	return (args);
+	free(args);
 }
