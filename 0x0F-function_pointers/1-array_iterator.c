@@ -6,7 +6,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	void (*p)(int);
 	p = action;
 
-	if (array == NULL || size < 1 || p == NULL)
+	if (array == NULL || p == NULL)
 		return;
 	for (i = 0; i < size; i++)
 	{
