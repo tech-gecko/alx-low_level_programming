@@ -1,6 +1,6 @@
 #include "lists.h"
 
-list_t *add_node(list_t **head __attribute((unused))__, const char *str)
+list_t *add_node(list_t **head , const char *str)
 {
 	list_t *new;
 	size_t i = 0;
