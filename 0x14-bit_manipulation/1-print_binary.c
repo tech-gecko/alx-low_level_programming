@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 	}
 	while (i >= 0)
 	{
-		if ((n & (1UL << i)) != 0)
+		if (n & (1UL << i))
 		{
 			_putchar('1');
 			flag = 1;
@@ -26,6 +26,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 		i--;
 	}
-	_putchar('\n');
 }
 
