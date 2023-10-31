@@ -55,14 +55,14 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
-		error(99, "Error: Can't write to file %s\n", argv[2]);
+		error(99, "Error: Can't write to %s\n", argv[2]);
 	}
 	while ((bytesRead = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		bytesWritten = write(fd_to, buffer, bytesRead);
 		if (bytesWritten != bytesRead)
 		{
-			error(99, "Error: Can't write to file %s\n", argv[2]);
+			error(99, "Error: Can't write to %s\n", argv[2]);
 		}
 	}
 	if (bytesRead == -1)
