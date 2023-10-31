@@ -40,11 +40,12 @@ int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
 	ssize_t bytesRead, bytesWritten;
-	char buffer[BUFFER_SIZE];
+	size_t BUFFER_SIZE = 1024;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
-		error(97, "Usage: cp file_from file_to\n");
+		error(97, "Usage: %s file_from file_to\n", argv[0]);
 	}
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
