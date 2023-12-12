@@ -1,2 +1,3 @@
 #!/bin/bash
-LD_PRELOAD=/$PWD/libtest.so ./gm 9 8 10 24 75 9
+gcc tests.o -shared -o libtests.so 
+LD_PRELOAD=/$PWD/libtests.so ./gm 9 8 10 24 75 9
