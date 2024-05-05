@@ -7,11 +7,11 @@
  *
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	long i;
 	long n = 612852475143;
-	long largest = -1; 
+	long largest = -1;
 
 	while (n % 2 == 0)
 	{
@@ -31,5 +31,5 @@ int main (void)
 	if (n > 2)
 		largest = n;
 
-	return largest;
+	return (largest);
 }
