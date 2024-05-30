@@ -1,5 +1,4 @@
 .PHONY = all
 all = school
-gcc = CC
 school: school.c
-    ${CC} main.c $< -o $@
+    gcc main.c $< -o $@
