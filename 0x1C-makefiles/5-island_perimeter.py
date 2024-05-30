@@ -15,6 +15,7 @@ def island_perimeter(grid):
 	Returns:
 	int: The perimeter of the island.
 	"""
+
 	rows = len(grid)
 	cols = len(grid[0])
 	perimeter = 0
@@ -22,9 +23,9 @@ def island_perimeter(grid):
 	for r in range(rows):
 		for c in range(cols):
 			if grid[r][c] == 1:
-				perimeter += 4  # Add 4 sides for each land cell
-				if r > 0 and grid[r - 1][c] == 1:  # Check upper cell
-					perimeter -= 2  # Remove 2 sides if adjacent land cell is found
-				if c > 0 and grid[r][c - 1] == 1:  # Check left cell
-					perimeter -= 2  # Remove 2 sides if adjacent land cell is found
+				perimeter += 4  '''Add 4 sides for each land cell'''
+				if r > 0 and grid[r - 1][c] == 1:  '''Check upper cell'''
+					perimeter -= 2  '''Remove 2 sides if adjacent land cell is found'''
+				if c > 0 and grid[r][c - 1] == 1:  '''Check left cell'''
+					perimeter -= 2  '''Remove 2 sides if adjacent land cell is found'''
 	return perimeter
