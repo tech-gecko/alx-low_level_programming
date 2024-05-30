@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-	Module to calculate the perimeter of an island in a grid.
+Module to calculate the perimeter of an island in a grid.
+
 """
 
 def island_perimeter(grid)
@@ -12,6 +13,7 @@ def island_perimeter(grid)
 
 	Returns:
 	int: The perimeter of the island.
+
 	"""
 	rows = len(grid)
 	cols = len(grid[0])
