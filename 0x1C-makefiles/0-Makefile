@@ -1,4 +1,7 @@
-.PHONY = all
+.PHONY = all, clean
 all = school
-school:
+school: main.c school.c
 	gcc main.c school.c -o $@
+clean:
+	rm school
+
