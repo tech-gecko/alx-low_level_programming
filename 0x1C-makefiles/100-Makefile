@@ -3,12 +3,12 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(OBJ) m.h
 	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
 clean:
-	$(RM) *~ \#* $(NAME)
+	rm -f *~ \#*
+	$(RM) $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean: clean oclean
